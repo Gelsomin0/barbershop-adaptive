@@ -1,0 +1,58 @@
+:root {
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    --accent-color: rgba(255, 108, 0, 1);
+    --main-color: #303030;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 250ms ease;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+.container {
+    padding: 0 16px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+    .container {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
