@@ -1,0 +1,102 @@
+.barbers-section {
+    background-color: #F7F7F7;
+}
+
+.barber-list {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+@media screen and (min-width: 1200px) {
+    .barber-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.barber-list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media screen and (min-width: 480px) {
+    .barber-list-item {
+        width: 418px;
+    }
+}
+
+.barber-list-image {
+    width: 100%;
+    height: 346px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 480px) {
+    .barber-list-image {
+        width: 418px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .barber-list-image {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .barber-list-image {
+        width: 370px;
+    }
+}
+
+.barber-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    margin-top: 30px;
+}
+
+.barber-status {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+}
+
+.barber-social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.barber-social-list-item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.barber-social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barber-social-listr-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--main-color);
+}

@@ -91,8 +91,18 @@
     }
 }
 
-.about-list-image {
-    width: 270px;
-    height: 445px;
-    object-fit: cover;
+@media screen and (min-width: 768px) {
+    .about-list-image {
+        width: 330px;
+        height: 235px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-list-image {
+        width: 270px;
+        height: 445px;
+        object-fit: cover;
+    }
 }
