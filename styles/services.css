@@ -1,0 +1,67 @@
+.services-section {
+    background: url('../img/services_bg.png'),
+                linear-gradient(#111319, #111319);
+    background-position: center;
+    background-size: cover;
+}
+
+.services-mobile-list,
+.services-desktop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px 30px 40px;
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.20) 100%);
+    margin-top: 44px;
+    margin-bottom:44px;
+}
+
+@media screen and (min-width: 1200px) {
+    .services-mobile-list {
+        display: none;
+    }
+}
+
+.services-mobile-list-item,
+.services-desktop-list-item {
+    display: flex;
+    align-items: center;
+    color: #9DA4BD;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+}
+
+.services-mobile-item-line,
+.services-desktop-item-line {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: auto;
+    height: 1px;
+    flex-grow: 1;
+    background-color: #9DA4BD;
+}
+
+.services-booking-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.services-desktop-lists {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .services-desktop-lists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+}
+
+.services-desktop-list {
+    flex-grow: 1;
+}

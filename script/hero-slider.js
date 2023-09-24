@@ -1,58 +1,48 @@
-const ell = {
-    sliderImage: document.querySelector('.hero-slider-img'),
-    sliderNavigation: document.querySelector('.slider-navigation').children,
-    leftButton: document.querySelector('.switch-slider-left-button'),
-    rightButton: document.querySelector('.switch-slider-right-button'),
+const sliderButtons = document.querySelectorAll('[data-carousel-button]');
+let canSlideAuto = true;
+
+const switchSliderWithClick = (button) => {
+    canSlideAuto = false;
+    const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
+    const slides = document.querySelector('[data-slides]');
+    const activeSlide = slides.querySelector('[data-active]');
+    const sliderNavigation = document.querySelector('.hero-slider-navigation');
+    const activeNavSlide = sliderNavigation.querySelector('[data-nav-active]');
+
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    sliderNavigation.children[newIndex].dataset.navActive = true;
+    delete activeSlide.dataset.active;
+    delete activeNavSlide.dataset.navActive;
 }
 
-let sliderIndex = 0;
-const sliderSpeed = 3000;
+const switchSliderAuto = () => {
+    const slides = document.querySelector('[data-slides]');
+    const activeSlide = slides.querySelector('[data-active]');
+    const sliderNavigation = document.querySelector('.hero-slider-navigation');
+    const activeNavSlide = sliderNavigation.querySelector('[data-nav-active]');
+
+    let newIndex = [...slides.children].indexOf(activeSlide) + 1;
+
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    sliderNavigation.children[newIndex].dataset.navActive = true;
+    delete activeSlide.dataset.active;
+    delete activeNavSlide.dataset.navActive;;
+}
+
+sliderButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        switchSliderWithClick(button);
+    }); 
+});
 
 setInterval(() => {
-    sliderIndex += 1;
-    if (sliderIndex > 2) sliderIndex = 0;
-    showSlider(sliderIndex);
-}, sliderSpeed);
-
-
-const showSlider = (index) => {
-    if (index === 0) {
-        ell.sliderImage.src = './img/hero_slider_01.jpg';
-        ell.sliderNavigation[index].classList.add('js-slider-navigation-item');
-        ell.sliderNavigation[2].classList.remove('js-slider-navigation-item');
-        ell.sliderNavigation[1].classList.remove('js-slider-navigation-item');
-    }
-
-    if (index === 1) {
-        ell.sliderImage.src = './img/hero_slider_02.jpg';
-        ell.sliderNavigation[index].classList.add('js-slider-navigation-item');
-        ell.sliderNavigation[index -1].classList.remove('js-slider-navigation-item');
-        ell.sliderNavigation[index +1].classList.remove('js-slider-navigation-item');
-    }
-
-    if (index === 2) {
-        ell.sliderImage.src = './img/hero_slider_03.jpg';
-        ell.sliderNavigation[index].classList.add('js-slider-navigation-item');
-        ell.sliderNavigation[index -1].classList.remove('js-slider-navigation-item');
-        ell.sliderNavigation[0].classList.remove('js-slider-navigation-item');
-    }
-}
-
-ell.leftButton.addEventListener('click', ({ target }) => switchSliderWithButton(target));
-ell.rightButton.addEventListener('click', ({ target }) => switchSliderWithButton(target));
-
-const switchSliderWithButton = (button) => {
-    if (button.classList.contains('switch-slider-left-button')) {
-        sliderIndex -= 1;
-        if (sliderIndex < 0) sliderIndex = 2;
-        showSlider(sliderIndex);
-    }
-
-    if (button.classList.contains('switch-slider-right-button')) {
-        sliderIndex += 1;
-        if (sliderIndex > 2) sliderIndex = 0;
-        showSlider(sliderIndex);
-    }
-}
-
-showSlider(sliderIndex);
+    if(canSlideAuto) switchSliderAuto();
+}, 4000);

@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/services.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +27,171 @@
                 </div>
 
                 <div class="hero-slider-section">
-                    <img class="hero-slider-img" src="./img/hero_slider_01.jpg" />
-                    <ul class="slider-navigation">
-                        <li class="slider-navigation-item js-slider-navigation-item"></li>
-                        <li class="slider-navigation-item"></li>
-                        <li class="slider-navigation-item"></li>
+                    <button type="button" data-carousel-button="prev">Back</button>
+                    <button type="button" data-carousel-button="next">Forward</button>
+                    <div class="hero-carousel">
+                        <ul data-slides>
+                            <li class="hero-carousel-item" data-active>
+                                <img class="hero-carousel-img" src="./img/hero_slider_01.jpg" alt="Slider image 1">
+                            </li>
+                            <li class="hero-carousel-item">
+                                <img class="hero-carousel-img" src="./img/hero_slider_02.jpg" alt="Slider image 2">
+                            </li>
+                            <li class="hero-carousel-item">
+                                <img class="hero-carousel-img" src="./img/hero_slider_03.jpg" alt="Slider image 3">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="hero-slider-navigation">
+                        <li class="hero-slider-navigation-item" data-nav-active></li>
+                        <li class="hero-slider-navigation-item"></li>
+                        <li class="hero-slider-navigation-item"></li>
                     </ul>
-                    <ul class="switch-slider">
-                        <li class="switch-slider-button switch-slider-left-button">Back</li>
-                        <li class="switch-slider-button switch-slider-right-button">Forward</li>
-                    </ul>
+
                     <p class="hero-supra-title">A hair salon for men in Kyiv</p>
                     <h1 class="hero-title">BarberShop</h1>
                     <p class="hero-desc">We are experts in trendy men’s haircuts. <br />
                         We work quickly, carefully and with style.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container about-container">
+                <div class="about-info-wrapper">
+                    <p class="section-supra-title">About</p>
+                    <h2 class="about-title">Best Barbershop in <br /> your city</h2>
+                    <p class="about-first-info">If you want to add more confidence to your image, you should visit us</p>
+                    <p class="about-second-info">We are a team that never stops at what has been achieved and are thirsty for changes. And when you fall into the hands of our master, you will never be the same again. We are a team that is always "on the same wave" with clients. Therefore, we are always ready to improve everyone who comes to us!</p>
+                    <button class="onlined-dark-button about-booking-btn" type="button">Online-booking</button>
+                </div>
+
+                <div class="about-image-wrapper">
+                    <ul class="about-wrapper-list">
+                        <li><img class="about-list-image" src="./img/about_01.jpg" alt="BarberShop working photo"></li>
+                        <li><img class="about-list-image" src="./img/about_02.jpg" alt="BarberShop working photo"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section">
+            <div class="container">
+                <p class="section-supra-title section-supra-title-grey">Spend your time with the best masters</p>
+                <h2 class="section-title section-title-light">Services and prices</h2>
+
+                <ul class="services-mobile-list">
+                    <li class="services-mobile-list-item">
+                        <p>Men’s haircut</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 300 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Beard trim</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 200 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Mustache trim</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 200 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Straight razor shave</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 200 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Trainee’s haircut</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 50 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Haircut under the nozzle</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 200 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Children’s haircut (0-12 y.o.)</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 300 uah.</p>
+                    </li>
+                    <li class="services-mobile-list-item">
+                        <p>Camouflage of grey hair</p>
+                        <span class="services-mobile-item-line"></span>
+                        <p>from 200 uah.</p>
+                    </li>
+                </ul>
+
+                <div class="services-desktop-lists">
+                    <ul class="services-desktop-list">
+                        <li class="services-desktop-list-item">
+                            <p>Men’s haircut</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 300 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Beard trim</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 200 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Mustache trim</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 200 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Straight razor shave</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 200 uah.</p>
+                        </li>
+                    </ul>
+                    <ul class="services-desktop-list">
+                        <li class="services-desktop-list-item">
+                            <p>Trainee’s haircut</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 50 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Haircut under the nozzle</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 200 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Children’s haircut (0-12 y.o.)</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 300 uah.</p>
+                        </li>
+                        <li class="services-desktop-list-item">
+                            <p>Camouflage of grey hair</p>
+                            <span class="services-desktop-item-line"></span>
+                            <p>from 200 uah.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="onlined-light-button services-booking-btn" type="button">Online-booking</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-supra-title">Old traditional school</p>
+                <h2 class="section-title">¿Why people come to us?</h2>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-supra-title">For true enjoyers of the atmosphere</p>
+                <h2 class="section-title">Our barbers</h2>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-supra-title">In Latin, "barba" means "beard"</p>
             </div>
         </section>
     </main>

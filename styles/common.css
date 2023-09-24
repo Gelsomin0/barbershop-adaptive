@@ -15,6 +15,8 @@
 
 ol, ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -31,6 +33,7 @@ button {
 
 body {
     font-family: var(--primary-font);
+    color: var(--main-color);
 }
 
 .container {
@@ -45,6 +48,12 @@ body {
     }
 }
 
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container {
         width: 768px;
@@ -55,4 +64,78 @@ body {
     .container {
         width: 1200px;
     }
+}
+
+.section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.section-supra-title {
+    position: relative;
+    color: #303030;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 80px;
+}
+
+.section-supra-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 60px;
+    background-color: currentColor;
+}
+
+.section-supra-title-grey {
+    color: rgba(157, 164, 189, 0.60);
+}
+
+.onlined-dark-button {
+    color: #303030;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    padding: 12px 20px;
+}
+
+.onlined-light-button {
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    padding: 12px 20px;
+}
+
+.section-title {
+    color: #303030;
+    font-family: var(--secondary-font);
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    margin-top: 20px;
+}
+
+.section-title-light {
+    color: #fff;
 }
