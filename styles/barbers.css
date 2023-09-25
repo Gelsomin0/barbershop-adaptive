@@ -95,8 +95,12 @@
     justify-content: center;
 }
 
-.barber-social-listr-icon {
+.barber-social-list-icon {
     width: 20px;
     height: 20px;
     fill: var(--main-color);
+}
+
+.barber-social-list-item:hover > a > .barber-social-list-icon {
+    fill: var(--accent-color);
 }

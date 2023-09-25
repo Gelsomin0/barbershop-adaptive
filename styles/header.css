@@ -1,0 +1,145 @@
+.header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 40px;
+    z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-top: 30px;
+    }
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .header-list {
+        margin: 0;
+    }
+
+    .header-list-icon-item {
+        margin-left: 20px;
+        margin-top: -18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-list-icon-item {
+        margin: 0;
+    }
+}
+
+.header-logo-icon {
+    width: 68px;
+    height: 55px;
+    fill: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .header-logo-icon {
+        fill: var(--main-color);
+    }
+}
+
+.header-menu-hamburger-item {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .header-menu-hamburger-item {
+        display: none;
+    }
+}
+
+.header-menu-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header-menu-icon {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+.header-nav-list-item {
+    display: none;
+    align-items: flex-start;
+    gap: 45px;
+}
+
+@media screen and (min-width: 768px) {
+    .header-nav-list-item {
+        display: flex;
+    }
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+    .header-nav-list {
+        margin: 0;
+        margin-right: 244px;
+        gap: 30px;
+    }
+}
+
+.header-nav-list-link {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.header-nav-list-link:hover {
+    color: var(--accent-color);
+}
+
+.header-nav-contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-right: 45px;
+}
+
+@media screen and (min-width: 768px) {
+    .header-nav-contact-list {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-nav-contact-list {
+        flex-direction: row-reverse;
+        gap: 43px;
+        margin: -9px 40px 0 0;
+    }
+}
+
+.header-nav-phone-number {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.header-nav-phone-number:hover {
+    color: var(--accent-color);
+}

@@ -1,3 +1,232 @@
+.footer-background {
+    background-image: url('../img/footer_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 496px, cover;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-background {
+        background-size: 100% 430px, cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-background {
+        background-position: right;
+        background-size: 50% 100%, cover;
+    }
+}
+
 .footer {
     background-color: #191C26;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-container {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+.footer-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    align-items: center;
+    padding-bottom: 84px;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-form-wrapper {
+        flex-grow: 1;
+    }
+}
+
+.footer-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-info-wrapper {
+        flex-direction: row;
+        gap: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-info-wrapper {
+        flex-direction: column;
+        gap: 70px;
+    }
+}
+
+.footer-section-title {
+    color: #fff;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-section-title {
+        margin-left: 0;
+    }
+}
+
+.footer-section-title-contacts {
+    margin-top: 84px;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-section-title-contacts {
+        margin-top: 0;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+}
+
+.footer-form-label {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form-label {
+        width: 0;
+        flex-grow: 1;
+    }
+}
+
+
+.footer-form-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.40);
+    padding: 8px 0;
+    outline: none;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+.footer-form-input::placeholder {
+    color: rgba(157, 164, 189, 0.40);
+    text-transform: uppercase;
+}
+
+.footer-form-input:is(:hover, :focus) {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.footer-form-input:is(:hover, :focus).footer-form-input::placeholder {
+    color: #fff;
+}
+
+.footer-form-textarea {
+    resize: none;
+    height: 75px;
+}
+
+.footer-form-btn {
+    width: 160px;
+}
+
+.footer-location-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-location-wrapper {
+        flex-grow: 1;
+        margin-left: 100px;
+    }
+}
+
+.footer-location-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-location-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.footer-location-list-icon {
+    width: 25px;
+    height: 24px;
+    fill: #9DA4BD;
+}
+
+.footer-location-list-desc {
+    color: #9DA4BD;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.36px;
+}
+
+.footer-location-list-desc:is(:hover, :focus) {
+    color: #fff;
+}
+
+.footer-location-list-desc-address {
+    font-weight: 700;
+}
+
+.footer-location-list-desc-email {
+    text-decoration: underline;
+}
+
+.footer-location-routine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-location-routine-supratitle-item {
+    margin-right: auto;
+}
+
+.footer-supra-title {
+    color: #fff;
+}
+
+.footer-routine-list-hours {
+    color: #9DA4BD;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.36px;
 }

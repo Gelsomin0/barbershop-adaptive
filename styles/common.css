@@ -114,6 +114,11 @@ body {
     padding: 12px 20px;
 }
 
+.onlined-dark-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
 .onlined-light-button {
     color: #fff;
     font-family: var(--primary-font);
@@ -125,6 +130,10 @@ body {
     border: 1px solid var(--accent-color);
     background-color: transparent;
     padding: 12px 20px;
+}
+
+.onlined-light-button:hover {
+    background-color: var(--accent-color);
 }
 
 .section-title {
