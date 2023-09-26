@@ -13,6 +13,10 @@
     transition: all 250ms ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ol, ul {
     list-style: none;
     margin: 0;
@@ -102,6 +106,7 @@ body {
 }
 
 .onlined-dark-button {
+    display: block;
     color: #303030;
     font-family: var(--primary-font);
     font-size: 12px;

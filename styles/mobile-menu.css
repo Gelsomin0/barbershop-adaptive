@@ -1,0 +1,114 @@
+.mob-menu-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(25, 28, 38, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mob-menu-backdrop.js-mobile-backdrop-is-open {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+.mob-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 64px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    background-color: #fff;
+    padding-left: 40px;
+}
+
+.mob-menu-wrapper.js-mobile-menu-wrapper-is-open {
+    right: 0;
+}
+
+.mob-menu-close-btn {
+    display: block;
+    position: absolute;
+    top: 48px;
+    right: 31px;
+    background-color: transparent;
+    border: none;
+}
+
+.mob-menu-close-btn-icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--main-color);
+}
+
+.mob-menu-links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.mob-menu-list-link {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.mob-menu-contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.mob-menu-phone-number {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.mob-menu-social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-left: 100px;
+}
+
+.mob-menu-social-link {
+    position: relative;
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+}
+
+.mob-menu-social-link-first::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    height: 1px;
+    width: 60px;
+    background-color: var(--main-color);
+}
+
+.mob-menu-list-link:is(:hover, :focus),
+.mob-menu-phone-number:is(:hover, :focus),
+.mob-menu-social-link:is(:hover, :focus) {
+    color: var(--accent-color);
+}
