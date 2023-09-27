@@ -1,17 +1,20 @@
 .header {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 1px;
     z-index: 999;
+    margin-top: 40px;
+    transition: none;
+    border-radius: 10px;
 }
 
-@media screen and (min-width: 768px) {
-    .header {
-        padding-top: 30px;
-    }
+.header.js-header-scrolled {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
 }
 
 .header-list {
@@ -47,6 +50,10 @@
 @media screen and (min-width: 768px) {
     .header-logo-icon {
         fill: var(--main-color);
+    }
+
+    .header.js-header-scrolled .header-logo-icon {
+        fill: #fff;
     }
 }
 
